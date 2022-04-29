@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150660528-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-150660528-1');
+        </script>
+      
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="The official website of actor Dmitry Vinokurov">
+        <meta name="keywords" content="Dmitry Vinokurov, actor, Дмитрий Винокуров, актёр">
+        <meta name="author" content="Anas Aamoum, Anton Shcherbinin & Dmitry Vinokurov">
+        <title>Audios - Dmitry Vinokurov</title>
+
+        <!-- fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="./static/css/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="./static/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./static/css/style.css?v666">
+    
+        <!-- JS -->
+        <script src="./static/js/jquery-3.4.0.min.js"></script>
+        <script src="./static/js/bootstrap/bootstrap.min.js"></script>
+        <script  type="module" src="./static/js/audio-player.js"></script>
+      
+        <style>  
+          body::-webkit-scrollbar {display: none;}
+          .spotlight-icon {opacity: 0.75; position: relative; bottom: 16px;}
+          .spotlight-icon:hover {text-decoration: none;color: white;}
+          .spotlight-icon:hover {opacity: 1;}
+        </style> 
+      
+    </head>
+
+    <body>
+      <!-- A grey horizontal navbar that collapses on small screens -->
+        <nav class="navbar navbar-expand-lg ap-dark navbar-dark sticky-top">
+            <!-- brand -->
+            <div class="navbar-brand">
+                <a href="./index.html"><img src="./static/img/DM-brand.png" alt="Dmitry Vinokurov Logo" class="logo-img"></a>&nbsp;&nbsp;&nbsp;<wbr>
+                <!-- <a href="./index.html" class="titre-navbar">DMITRY VINOKUROV</a>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> -->
+                <a href="https://www.instagram.com/dm.vinokurov/" target="_blank" class="social-icons"><i class="fa fa-instagram" aria-hidden="true"></i></a>&nbsp;
+                <a href="https://www.facebook.com/DAVinokurov" target="_blank" class="social-icons"><i class="fa fa-facebook" aria-hidden="true"></i></a>&nbsp;
+                <a href="https://www.imdb.com/name/nm9537565/?ref_=ttfc_fc_cl_t2" target="_blank" class="social-icons"><i class="fa fa-imdb" aria-hidden="true"></i></a>&nbsp;
+                <a href="https://www.youtube.com/channel/UCnCFMErXJdftB4JF3SayjQg" target="_blank" class="social-icons"><i class="fa fa-youtube" aria-hidden="true"></i></a>&nbsp;
+                <a href="https://www.spotlight.com/interactive/cv/5098-6728-8278" target="_blank"><img class="spotlight-icon" src="./static/img/spotlight.png" height="20" ></a>
+            </div>
+            <!-- <a class="navbar-brand" href="#">Dmitry Vinokurov</a> -->
+            
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <!-- <ul class="navbar-nav mr-auto mt-2 mt-lg-0"> -->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./cv.html">CV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./photographs.html">PHOTOGRAPHS</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./videos.html">VIDEOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+    
+        <template>
+          <style>
+            button {
+              padding: 0;
+              border: 0;
+              background: transparent;
+              cursor: pointer;
+              outline: none;
+              width: 40px;
+              height: 40px;
+              position: relative;
+              top: 10px;
+            }
+            #audio-player-container {
+              position: relative;
+              margin: 30px;
+              margin-left: auto;
+              margin-right: auto;
+              padding-bottom: 18px;
+              padding-right: 10px;
+              width: 95%;
+              max-width: 400px;
+              background: #fff;
+              font-family: Arial, Helvetica, sans-serif;
+              --seek-before-width: 0%;
+              --volume-before-width: 100%;
+              --buffered-width: 0%;
+              letter-spacing: -0.5px;
+            }
+            #audio-player-container::before {
+              position: absolute;
+              content: '';
+              width: calc(100% + 4px);
+              height: calc(100% + 4px);
+              left: -2px;
+              top: -2px;
+              background: linear-gradient(to left, #868686, #000000);
+              z-index: -1;
+            }
+            #audio-player-container > div {
+              text-align: center;
+              white-space: nowrap;
+            }
+            p {
+              position: absolute;
+              top: -18px;
+              right: 5%;
+              padding: 0 5px;
+              margin: 0;
+              font-size: 28px;
+              background: #fff;
+            }
+            #play-icon {
+              margin-right: 10px;
+            }
+            path {
+              stroke: #007db5;
+            }
+            .time {
+              display: inline-block;
+              width: 37px;
+              text-align: center;
+              font-size: 20px;
+              margin-right: 10px;
+            }
+            output {
+              display: inline-block;
+              width: 32px;
+              text-align: center;
+              font-size: 20px;
+              margin: 10px 2.5% 0 5%;
+            }
+            #volume-slider {
+              margin: 10px 2.5%;
+              width: 58%;
+            }
+            #volume-slider::-webkit-slider-runnable-track {
+              background: rgba(0, 125, 181, 0.6);
+            }
+            #volume-slider::-moz-range-track {
+              background: rgba(0, 125, 181, 0.6);
+            }
+            #volume-slider::-ms-fill-upper {
+              background: rgba(0, 125, 181, 0.6);
+            }
+            #volume-slider::before {
+                width: var(--volume-before-width);
+            }
+            #mute-icon {
+              margin: 0 2.5%;
+            }
+            input[type="range"] {
+              position: relative;
+              -webkit-appearance: none;
+              height: 19px;
+              margin: 30px 2.5% 20px 2.5%;
+              outline: none;
+              top: 2px;
+            }
+            input[type="range"]::-webkit-slider-runnable-track {
+              width: 100%;
+              height: 3px;
+              cursor: pointer;
+              background: linear-gradient(to right, rgba(0, 125, 181, 0.6) var(--buffered-width), rgba(0, 125, 181, 0.2) var(--buffered-width));
+            }
+            input[type="range"]::before {
+              position: absolute;
+              content: "";
+              top: 8px;
+              left: 0;
+              width: var(--seek-before-width);
+              height: 3px;
+              background-color: #007db5;
+              cursor: pointer;
+            }
+            input[type="range"]::-webkit-slider-thumb {
+              position: relative;
+              -webkit-appearance: none;
+              box-sizing: content-box;
+              border: 1px solid #007db5;
+              height: 15px;
+              width: 15px;
+              border-radius: 50%;
+              background-color: #fff;
+              cursor: pointer;
+              margin: -7px 0 0 0;
+            }
+            input[type="range"]:active::-webkit-slider-thumb {
+              transform: scale(1.2);
+              background: #007db5;
+            }
+            input[type="range"]::-moz-range-track {
+              width: 100%;
+              height: 3px;
+              cursor: pointer;
+              background: linear-gradient(to right, rgba(0, 125, 181, 0.6) var(--buffered-width), rgba(0, 125, 181, 0.2) var(--buffered-width));
+            }
+            input[type="range"]::-moz-range-progress {
+              background-color: #007db5;
+            }
+            input[type="range"]::-moz-focus-outer {
+              border: 0;
+            }
+            input[type="range"]::-moz-range-thumb {
+              box-sizing: content-box;
+              border: 1px solid #007db5;
+              height: 15px;
+              width: 15px;
+              border-radius: 50%;
+              background-color: #fff;
+              cursor: pointer;
+            }
+            input[type="range"]:active::-moz-range-thumb {
+              transform: scale(1.2);
+              background: #007db5;
+            }
+            input[type="range"]::-ms-track {
+              width: 100%;
+              height: 3px;
+              cursor: pointer;
+              background: transparent;
+              border: solid transparent;
+              color: transparent;
+            }
+            input[type="range"]::-ms-fill-lower {
+              background-color: #007db5;
+            }
+            input[type="range"]::-ms-fill-upper {
+              background: linear-gradient(to right, rgba(0, 125, 181, 0.6) var(--buffered-width), rgba(0, 125, 181, 0.2) var(--buffered-width));
+            }
+            input[type="range"]::-ms-thumb {
+              box-sizing: content-box;
+              border: 1px solid #007db5;
+              height: 15px;
+              width: 15px;
+              border-radius: 50%;
+              background-color: #fff;
+              cursor: pointer;
+            }
+            input[type="range"]:active::-ms-thumb {
+              transform: scale(1.2);
+              background: #007db5;
+            }
+          </style>
+
+          <div id="audio-player-container">
+            <audio src="" preload="metadata" loop></audio>
+            <p id="file-name">audio player ish</p>
+
+            <div>
+              <button id="play-icon"></button>
+              <span id="current-time" class="time">0:00</span>
+              <input type="range" id="seek-slider" max="100" value="0">
+              <span id="duration" class="time">0:00</span>
+            </div>
+
+            <div style="display: none;">
+              <output id="volume-output">100</output>
+              <input type="range" id="volume-slider" max="100" value="100">
+              <button id="mute-icon"></button>
+            </div>
+          </div>
+        </template>
+        
+      <div class="container" style="height: 90vh;">
+        <audio-player data-src="./static/mp3/XXXTENTACION-Triumph.mp3" data-name="Triumph"></audio-player>
+        <div style="text-align: center;">
+          <audio controls preload="auto" style="width:100%; max-width:400px;">
+            <source src="https://dmitryvinokurov.com/static/mp3/XXXTENTACION-Triumph.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+    </body>
+</html>
