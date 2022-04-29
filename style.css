@@ -148,6 +148,9 @@ li.star-bullet:before {
   color: black;
 }
 
+.show {
+  margin-top: 20px;
+}
 /* social-icons */
 
 .social-icons-container {
@@ -157,7 +160,7 @@ li.star-bullet:before {
   align-items: flex-start;
   column-gap: 10px;
   padding-top: 10px;
-  min-height: 50px;
+  padding-bottom: 10px;
 }
 
 .social-icons {
