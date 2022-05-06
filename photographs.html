@@ -20,10 +20,10 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150660528-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-          function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'UA-150660528-1');
-</script>
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-150660528-1');
+  </script>
 
   <!-- fonts -->
   <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
@@ -41,42 +41,25 @@
   <style>
     ::-webkit-scrollbar {
       width: 0px;
+      /* Remove scrollbar space */
       background: transparent;
-    }
-
-    .gallery-thumbnails {
-      display: flex;
-      max-width: 1000px;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      padding: 10px;
-      row-gap: 15px;
-      column-gap: 10px;
+      /* Optional: just make scrollbar invisible */
     }
 
     .gallery-thumbnails img {
-      margin: 0 auto;
       height: 200px;
+      margin: 0 10px 10px 0;
       width: auto;
       display: inline-block;
+      margin: 3px;
       cursor: pointer;
       transition: transform .2s;
       border-radius: 5px;
       box-shadow: #80808073 0px 0px 10px;
     }
 
-    img.tall {
-      width: 49%;
-      height: auto;
-    }
-
-    img.wide {
-      width: 100%;
-      height: auto;
-    }
-
     .gallery-thumbnails img:hover {
-      transform: scale(1.01);
+      transform: scale(1.02);
     }
 
     @media only screen and (max-width: 500px) {
@@ -115,9 +98,9 @@
         <a href="https://www.spotlight.com/interactive/cv/5098-6728-8278" target="_blank"><img
             class="spotlight-icon" src="./static/img/spotlight.png" height="20"></a>
       </div>
-      </div>
-      
-      <!-- Toggler/collapsibe Button -->
+    </div>
+
+    <!-- Toggler/collapsibe Button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse"
       data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
@@ -159,29 +142,29 @@
   <div class="" style="width:100%; padding-top: 25px; height: 90vh;">
     <div class="gallery">
       <div class="gallery-thumbnails" style="margin:0 auto;  text-align:center; padding-top:15px;">
-        <img class="tall" src="./static/img/dmitry_vinokurov_1.jpeg">
-        <img class="tall" src="./static/img/dmitry_vinokurov_2.jpeg">
-        <img class="tall" src="./static/img/dmitry_vinokurov_3.jpeg">
-        <img class="tall" src="./static/img/dmitry_vinokurov_4.jpeg">
-        <img class="tall" src="./static/img/dmitry_vinokurov_5.jpeg">
-        <img class="tall" src="./static/img/dmitry_vinokurov_6.jpeg">
-        <img class="wide" src="./static/img/halvdan_the_last_journey_of_the_vikings_1.jpg">
-        <img class="wide" src="./static/img/halvdan_the_last_journey_of_the_vikings_2.jpg">
-        <img class="wide" src="./static/img/halvdan_the_last_journey_of_the_vikings_3.jpg">
-        <img class="wide" src="./static/img/halvdan_the_last_journey_of_the_vikings_4.jpg">
-        <img class="wide" src="./static/img/halvdan_the_last_journey_of_the_vikings_5.jpg">
-        <img class="wide" src="./static/img/halvdan_the_last_journey_of_the_vikings_6.png">
-        <img class="wide" src="./static/img/jonas_god_given_opportunity.jpg">
-        <img class="wide" src="./static/img/danya_united_1.jpg">
-        <img class="wide" src="./static/img/danya_united_2.jpg">
-        <img class="wide" src="./static/img/danya_united_3.jpg">
-        <img class="wide" src="./static/img/magnus_rig_45_1.jpg">
-        <img class="wide" src="./static/img/magnus_rig_45_2.jpg">
-        <img class="tall" src="./static/img/dmitry_vinokurov.jpeg">
-        <img class="tall" src="./static/img/outdoors.jpeg">
-        <img class="wide" src="./static/img/resonating_raw_1.jpeg">
-        <img class="wide" src="./static/img/resonating_raw_2.jpeg">
-        <img class="wide" src="./static/img/arminius_sacred_sites_nazi_myths.jpg">
+        <img src="./static/img/dmitry_vinokurov_1.jpeg">
+        <img src="./static/img/dmitry_vinokurov_2.jpeg">
+        <img src="./static/img/dmitry_vinokurov_3.jpeg">
+        <img src="./static/img/dmitry_vinokurov_4.jpeg">
+        <img src="./static/img/dmitry_vinokurov_5.jpeg">
+        <img src="./static/img/dmitry_vinokurov_6.jpeg">
+        <img src="./static/img/halvdan_the_last_journey_of_the_vikings_1.jpg">
+        <img src="./static/img/halvdan_the_last_journey_of_the_vikings_2.jpg">
+        <img src="./static/img/halvdan_the_last_journey_of_the_vikings_3.jpg">
+        <img src="./static/img/halvdan_the_last_journey_of_the_vikings_4.jpg">
+        <img src="./static/img/halvdan_the_last_journey_of_the_vikings_5.jpg">
+        <img src="./static/img/halvdan_the_last_journey_of_the_vikings_6.png">
+        <img src="./static/img/jonas_god_given_opportunity.jpg">
+        <img src="./static/img/danya_united_1.jpg">
+        <img src="./static/img/danya_united_2.jpg">
+        <img src="./static/img/danya_united_3.jpg">
+        <img src="./static/img/magnus_rig_45_1.jpg">
+        <img src="./static/img/magnus_rig_45_2.jpg">
+        <img src="./static/img/dmitry_vinokurov.jpeg">
+        <img src="./static/img/outdoors.jpeg">
+        <img src="./static/img/resonating_raw_1.jpeg">
+        <img src="./static/img/resonating_raw_2.jpeg">
+        <img src="./static/img/arminius_sacred_sites_nazi_myths.jpg">
       </div>
     </div>
   </div>
