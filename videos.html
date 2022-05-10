@@ -24,20 +24,20 @@
   <meta property="og:description" content="Videos of Dmitry Vinokurov" />
   <meta property="og:image" content="https://dmitryvinokurov.com/static/img/index.jpg" />
   <link rel="icon" type="image/x-icon" href="favicon.png">
-  
+
   <!-- fonts -->
   <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
-  
+
   <!-- CSS -->
   <link rel="stylesheet" href="./static/css/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="./static/css/font-awesome.min.css">
   <link rel="stylesheet" href="./style.css?v222">
-  
+
   <!-- JS -->
   <script src="./static/js/jquery-3.4.0.min.js"></script>
   <script src="./static/js/bootstrap/bootstrap.min.js"></script>
-  
+
   <style>
     body::-webkit-scrollbar {
       display: none;
@@ -52,9 +52,41 @@
       width: 100%;
       height: 100%;
     }
+
+    .container {
+      display: flex;
+      max-width: 1300px;
+      padding: 10px 0px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      row-gap: 10px;
+      column-gap: 10px;
+    }
+
+    .vid-block {
+      height: 220px;
+      width: 45%;
+      position: relative;
+      overflow: hidden;
+      background: black;
+    }
+
+    @media only screen and (max-width: 500px) {
+      .container {
+        max-width: 95vw;
+      }
+      .vid-block {
+        width: 100%;
+      }
+    }
+
+    iframe {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    }
   </style>
-  
-  </head>
+</head>
 
 <body>
 
@@ -75,15 +107,15 @@
           class="social-icons"><i class="fa fa-youtube" aria-hidden="true"></i></a>
         <a href="https://www.spotlight.com/interactive/cv/5098-6728-8278" target="_blank"><img
             class="spotlight-icon" src="./static/img/spotlight.png" height="20"></a>
-        </div>
-        </div>
-        
-        <!-- Toggler/collapsibe Button -->
+      </div>
+      </div>
+      
+      <!-- Toggler/collapsibe Button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse"
       data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
-    
+
     <!-- Links -->
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <!-- <ul class="navbar-nav mr-auto mt-2 mt-lg-0"> -->
@@ -105,48 +137,65 @@
         </li>
       </ul>
     </div>
-    </nav>
-    
-    <div class="container">
-    <div style="margin: auto;  max-width: 500px; position: relative; padding: 10px 0px;">
-      <iframe style="width:100%; height:215px;" src="https://www.youtube.com/embed/Nye-1FEKJVc"
-        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  </nav>
+  
+  <div class="container">
+    <div class="vid-block">
+      <iframe src="https://www.youtube.com/embed/Nye-1FEKJVc" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
-      <div
-        style="position: relative; padding-bottom: 215px; overflow: hidden; max-width: 100%; background: black; margin-bottom: 5px;">
-        <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-          src='https://player.vimeo.com/video/620018731' frameborder='0'></iframe>
-      </div>
-      <iframe style="width:100%; height:215px;" src="https://www.youtube.com/embed/yUV8DWuYsOw"
-        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    </div>
+    <div class="vid-block">
+      <iframe src='https://player.vimeo.com/video/620018731' frameborder='0'
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
-      <iframe style="width:100%; height:215px;" src="https://www.youtube.com/embed/A7U55yb4siY"
-        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    </div>
+    <div class="vid-block">
+      <iframe src="https://www.youtube.com/embed/yUV8DWuYsOw" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
-      <iframe style="width:100%; height:215px;" src="https://www.youtube.com/embed/PIhfQOe5dvo"
-        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    </div>
+    <div class="vid-block">
+      <iframe src="https://www.youtube.com/embed/A7U55yb4siY" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
-      <iframe style="width:100%; height:215px;" src="https://www.youtube.com/embed/JTiRTXKyhRc"
-        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    </div>
+    <div class="vid-block">
+      <iframe src="https://www.youtube.com/embed/PIhfQOe5dvo" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
-      <iframe style="width:100%; height:215px;" src="https://www.youtube.com/embed/dJduVc6lteE"
-        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    </div>
+    <div class="vid-block">
+      <iframe src="https://www.youtube.com/embed/JTiRTXKyhRc" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
-      <iframe style="width:100%; height:215px;" src="https://www.youtube.com/embed/ajOadGDeM7c"
-        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    </div>
+    <div class="vid-block">
+      <iframe src="https://www.youtube.com/embed/dJduVc6lteE" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
-      <iframe style="width:100%; height:215px;" src="https://www.youtube.com/embed/B2OFqDAUyAs"
-        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    </div>
+    <div class="vid-block">
+      <iframe src="https://www.youtube.com/embed/ajOadGDeM7c" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
-      <iframe style="width:100%; height:215px;" src="https://www.youtube.com/embed/4h9z_ICDMdU"
-        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    </div>
+    <div class="vid-block">
+      <iframe src="https://www.youtube.com/embed/B2OFqDAUyAs" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
-      <iframe style="width:100%; height:215px;" src="https://www.youtube.com/embed/PqpDDKiuUC0"
-        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    </div>
+    <div class="vid-block">
+      <iframe src="https://www.youtube.com/embed/4h9z_ICDMdU" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
-      </div>
-      </div>
-      
-      </body>
+    </div>
+    <div class="vid-block">
+      <iframe src="https://www.youtube.com/embed/PqpDDKiuUC0" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    </div>
+</body>
 
 </html>
