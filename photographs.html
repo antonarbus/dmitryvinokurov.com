@@ -46,6 +46,10 @@
       /* Optional: just make scrollbar invisible */
     }
 
+    img {
+      border-radius: 5px;
+    }
+
     .gallery-thumbnails img {
       height: 200px;
       margin: 0 10px 10px 0;
@@ -177,7 +181,11 @@
   </div>
 
   <script>
+            let scrollPos = 0
+
     $(".gallery-thumbnails img").on("click", function () {
+      console.log(window.scrollY)
+      scrollPos = window.scrollY
       $("#Image").attr({ src: $(this).attr('src') });
       $("#Dimmed").show();
       $("#Image, #Close, #Next, #Previous").show();
@@ -190,6 +198,7 @@
       $("#Dimmed").hide();
       $("#Image, #Close, #Next, #Previous").hide();
       $(".gallery-thumbnails, #Nav").show();
+      window.scrollTo(0, scrollPos);
     });
 
     $("#Image").on("click", function () {
@@ -268,6 +277,7 @@
           $("#Dimmed").hide();
           $("#Image, #Close, #Next, #Previous").hide();
           $(".gallery-thumbnails, #Nav").show();
+          window.scrollTo(0, scrollPos);
         }
       }
     });
