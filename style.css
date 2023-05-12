@@ -152,7 +152,6 @@ li.star-bullet:before {
 }
 
 /* social-icons */
-
 .social-icons-container {
   display: inline-flex;
   flex-wrap: nowrap;
@@ -166,7 +165,6 @@ li.star-bullet:before {
 .social-icons {
   color: rgba(255, 255, 255, .75);
   opacity: 0.75;
-  /* text-decoration: none; */
 }
 
 .social-icons:hover {
