@@ -1,13 +1,15 @@
 function showNavItems() {
-  const isNavItemsShown = document.querySelector('.shown-on-phone')
-  if (isNavItemsShown) {
-    $(".nav-links").show()
-    $(".nav-links").slideUp(function() {
-      document.querySelector('.nav-links').classList.remove("shown-on-phone")
+  const navLinks = $(".nav-links")
+  const navItemsShownOnPhone = navLinks.hasClass("shown-on-phone")
+  
+  if (navItemsShownOnPhone) {
+    navLinks.show()
+    navLinks.slideUp(function() {
+      navLinks.removeClass("shown-on-phone")
     })
   } else {
-    $(".nav-links").hide()
-    document.querySelector('.nav-links').classList.add("shown-on-phone")
-    $(".nav-links").slideDown()
+    navLinks.hide()
+    navLinks.addClass("shown-on-phone")
+    navLinks.slideDown()
   }
 }
