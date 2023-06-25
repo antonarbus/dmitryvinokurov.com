@@ -107,6 +107,10 @@ nav {
   font-size: 1.3rem;
 }
 
+.active {
+  color: white !important;
+}
+
 @media (max-width: 700px) {
   .nav-links:not(.shown-on-phone) {
     display: none;

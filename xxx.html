@@ -22,8 +22,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./static/css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./static/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./nav.css?v1">
-    <!-- <link rel="stylesheet" href="./style.css?v222"> -->
+    <link rel="stylesheet" href="./nav.css?v2">
 
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -60,16 +59,14 @@
         }
       }
 
-      .HoverWhite:hover {
+      .hoverWhite:hover {
         color: white !important;
       }
     </style>
-
-    
   </head>
 
   <body>
-    <div id="Dimmed"
+    <div id="dimmed"
       style="display:none; position:fixed; overflow:auto; top:0; left:0; width:100%; height:100%; background:#000; opacity:0.5; z-index:665;">
     </div>
 
@@ -125,9 +122,9 @@
         <div class="nav-links">
           <a href="./about.html">ABOUT</a>
           <a href="./cv.html">CV</a>
-          <a href="./photographs.html">PHOTOGRAPHS</a>
+          <a href="./photographs.html" class="active">PHOTOGRAPHS</a>
           <a href="./videos.html">VIDEOS</a>
-          <a href="contact.html">CONTACT</a>
+          <a href="./contact.html">CONTACT</a>
         </div>
         <a 
           class="hamburger" 
@@ -139,13 +136,13 @@
       </div>
     </nav>
 
-    <span id="Close" class="Close HoverWhite"
+    <span id="close" class="close hoverWhite"
       style=" position:fixed; display:none; top: 0px; right: 20px; color:#c1c1c1; font-size:50px; font-weight:600; z-index:667; cursor:pointer; transition:all .3s ease; user-select:none;">×</span>
-    <span id="Next" class="HoverWhite"
+    <span id="next" class="hoverWhite"
       style=" position:fixed; display:none; width:20px;  right: 0px; top: 50%; transform: translate(-50%, -50%); color:#c1c1c1; font-size:40px; font-weight:600; z-index:667;  cursor:pointer; transition:all .3s ease; user-select:none;">❯</span>
-    <span id="Previous" class="HoverWhite"
+    <span id="previous" class="hoverWhite"
       style=" position:fixed;  display:none; width:20px; left: 15px; top: 50%; transform: translate(-50%, -50%); color:#c1c1c1; font-size:40px; font-weight:600; z-index:667; cursor:pointer; transition:all .3s ease; user-select:none;">❮</span>
-    <img id="Image" src=""
+    <img id="image" src=""
       style=" position:fixed; display:none; width: 95%; height: 95%; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index:666; user-select:none; cursor:pointer; object-fit: contain;">
 
     <div class="" style="width:100%; padding-top: 25px; height: 90vh;">
@@ -191,31 +188,31 @@
 
     <script>
       $(".gallery-thumbnails img").on("click", function () {
-        $("#Image").attr({ src: $(this).attr('src') });
-        $("#Dimmed").show();
-        $("#Image, #Close, #Next, #Previous").show();
+        $("#image").attr({ src: $(this).attr('src') });
+        $("#dimmed").show();
+        $("#image, #close, #next, #previous").show();
         $(".gallery-thumbnails, #Nav").hide();
         $('.gallery-thumbnails img').css('transform', 'scale("1.0")');
         $(this).css('transform', 'scale("1.1")');
       });
 
-      $("#Dimmed, #Close").on("click", function () {
-        $("#Dimmed").hide();
-        $("#Image, #Close, #Next, #Previous").hide();
+      $("#dimmed, #close").on("click", function () {
+        $("#dimmed").hide();
+        $("#image, #close, #next, #previous").hide();
         $(".gallery-thumbnails, #Nav").show();
       });
 
-      $("#Image").on("click", function () {
+      $("#image").on("click", function () {
         SRC = $(this).attr('src');
         $(".gallery-thumbnails img").each(function () {
           if (SRC == $(this).attr('src')) {
             $('.gallery-thumbnails img').css('transform', 'scale("1.0")');
             if ($(this).next().length > 0) {
-              $("#Image").attr({ src: $(this).next().attr('src') });
+              $("#image").attr({ src: $(this).next().attr('src') });
               $(this).next().css('transform', 'scale("1.1")');
             }
             else {
-              $("#Image").attr({ src: $(this).siblings().first().attr('src') });
+              $("#image").attr({ src: $(this).siblings().first().attr('src') });
               $(this).siblings().first().css('transform', 'scale("1.1")');
             }
             return;
@@ -223,38 +220,38 @@
         });
       });
 
-      $("#Next").on("click", Right);
+      $("#next").on("click", Right);
 
       function Right() {
-        SRC = $("#Image").attr('src');
+        SRC = $("#image").attr('src');
         $(".gallery-thumbnails img").each(function () {
           if (SRC == $(this).attr('src')) {
             $('.gallery-thumbnails img').css('transform', 'scale("1.0")');
             if ($(this).next().length > 0) {
-              $("#Image").attr({ src: $(this).next().attr('src') });
+              $("#image").attr({ src: $(this).next().attr('src') });
               $(this).next().css('transform', 'scale("1.1")');
             }
             else {
-              $("#Image").attr({ src: $(this).siblings().first().attr('src') });
+              $("#image").attr({ src: $(this).siblings().first().attr('src') });
               $(this).siblings().first().css('transform', 'scale("1.1")');
             }
             return;
           }
         });
       }
-      $("#Previous").on("click", Left);
+      $("#previous").on("click", Left);
 
       function Left() {
-        SRC = $("#Image").attr('src');
+        SRC = $("#image").attr('src');
         $(".gallery-thumbnails img").each(function () {
           if (SRC == $(this).attr('src')) {
             $(".gallery-thumbnails img").css('transform', 'scale("1.0")');
             if ($(this).prev().length > 0) {
-              $("#Image").attr({ src: $(this).prev().attr('src') });
+              $("#image").attr({ src: $(this).prev().attr('src') });
               $(this).prev().css('transform', 'scale("1.1")');
             }
             else {
-              $("#Image").attr({ src: $(this).siblings().last().attr('src') });
+              $("#image").attr({ src: $(this).siblings().last().attr('src') });
               $(this).siblings().last().css('transform', 'scale("1.1")');
             }
             return;
@@ -263,23 +260,23 @@
       }
 
       $(document).on('keydown', function (event) {
-        if ($('#Image').is(":visible")) {
+        if ($('#image').is(":visible")) {
           if (event.keyCode == 39) // right 
           {
             Right();
-            $('#Next').css({ 'color': 'white' });
-            setTimeout(function () { $('#Next').css({ 'color': '#c1c1c1' }); }, 150);
+            $('#next').css({ 'color': 'white' });
+            setTimeout(function () { $('#next').css({ 'color': '#c1c1c1' }); }, 150);
           }
           else if (event.keyCode == 37) // left 
           {
             Left();
-            $('#Previous').css({ 'color': 'white' });
-            setTimeout(function () { $('#Previous').css({ 'color': '#c1c1c1' }); }, 150);
+            $('#previous').css({ 'color': 'white' });
+            setTimeout(function () { $('#previous').css({ 'color': '#c1c1c1' }); }, 150);
           }
           else if (event.keyCode == 27) //ESC
           {
-            $("#Dimmed").hide();
-            $("#Image, #Close, #Next, #Previous").hide();
+            $("#dimmed").hide();
+            $("#image, #close, #next, #previous").hide();
             $(".gallery-thumbnails, #Nav").show();
           }
         }

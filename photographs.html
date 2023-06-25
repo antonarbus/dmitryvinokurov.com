@@ -14,123 +14,97 @@
     <meta property="og:description" content="Photos of Dmitry Vinokurov" />
     <meta property="og:image" content="https://dmitryvinokurov.com/static/img/index.jpg" />
     <link rel="icon" type="image/x-icon" href="favicon.png">
-
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
-
     <!-- CSS -->
-    <link rel="stylesheet" href="./static/css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./static/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./style.css?v222">
-
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./nav.css">
+    <link rel="stylesheet" href="./photographs.css">
     <!-- JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="./static/js/bootstrap/bootstrap.min.js"></script>
-
-    <style>
-      ::-webkit-scrollbar {
-        width: 0px;
-        /* Remove scrollbar space */
-        background: transparent;
-        /* Optional: just make scrollbar invisible */
-      }
-
-      .gallery-thumbnails img {
-        height: 200px;
-        margin: 0 10px 10px 0;
-        width: auto;
-        display: inline-block;
-        margin: 3px;
-        cursor: pointer;
-        transition: transform .2s;
-        border-radius: 5px;
-      }
-
-      .gallery-thumbnails img:hover {
-        transform: scale(1.02);
-      }
-
-      @media only screen and (max-width: 500px) {
-        .gallery-thumbnails img {
-          height: auto;
-          width: 95% !important;
-        }
-      }
-
-      .HoverWhite:hover {
-        color: white !important;
-      }
-    </style>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script defer src="./photographs.js"></script>
+    <script defer src="./nav.js"></script>
   </head>
-
   <body>
-    <div id="Dimmed"
-      style="display:none; position:fixed; overflow:auto; top:0; left:0; width:100%; height:100%; background:#000; opacity:0.5; z-index:665;">
-    </div>
-
-    <!-- A grey horizontal navbar that collapses on small screens -->
-    <nav id="Nav" class="navbar navbar-expand-lg ap-dark navbar-dark sticky-top">
-      <!-- brand -->
-      <div class="navbar-brand">
-        <a href="./index.html"><img src="./static/img/DM-brand.png" alt="Dmitry Vinokurov Logo"
-            class="logo-img"></a><wbr/>
+    <!-- nav -->
+    <nav>
+      <div class="logo-and-social-icons-container">
+        <div class="logo-container">
+          <a href="./index.html">
+            <img 
+              class="logo-img" 
+              src="./static/img/DM-brand.png" 
+              alt="Dmitry Vinokurov Logo" 
+            />
+          </a>
+        </div>
         <div class="social-icons-container">
-          <a href="https://www.instagram.com/dm.vinokurov/" target="_blank" class="social-icons"><i
-              class="fa fa-instagram" aria-hidden="true"></i></a>
-          <a href="https://www.facebook.com/DAVinokurov" target="_blank" class="social-icons"><i
-              class="fa fa-facebook" aria-hidden="true"></i></a>
-          <a href="https://www.imdb.com/name/nm9537565/?ref_=ttfc_fc_cl_t2" target="_blank"
-            class="social-icons"><i class="fa fa-imdb" aria-hidden="true"></i></a>
-          <a href="https://www.youtube.com/channel/UCnCFMErXJdftB4JF3SayjQg" target="_blank"
-            class="social-icons"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-          <a href="https://www.spotlight.com/interactive/cv/5098-6728-8278" target="_blank"><img
-              class="spotlight-icon" src="./static/img/spotlight.png" height="20"></a>
+          <a 
+            href="https://www.instagram.com/dm.vinokurov/" 
+            target="_blank" 
+          >
+            <i class="fa fa-instagram"></i>
+          </a>
+          <a 
+            href="https://www.facebook.com/DAVinokurov" 
+            target="_blank" 
+          >
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a
+            href="https://www.imdb.com/name/nm9537565/?ref_=ttfc_fc_cl_t2"
+            target="_blank"
+          >
+            <i class="fa fa-imdb"></i>
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCnCFMErXJdftB4JF3SayjQg"
+            target="_blank"
+          >
+            <i class="fa fa-youtube"></i>
+          </a>
+          <a 
+            href="https://www.spotlight.com/interactive/cv/5098-6728-8278" 
+            target="_blank"
+          >
+            <img 
+              class="spotlight-icon"
+              src="./static/img/spotlight.png" 
+              height="20"
+            />
+          </a>
         </div>
       </div>
-
-      <!-- Toggler/collapsibe Button -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse"
-        data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-
-      <!-- Links -->
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <!-- <ul class="navbar-nav mr-auto mt-2 mt-lg-0"> -->
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="./about.html">ABOUT</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./cv.html">CV</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="./photographs.html">PHOTOGRAPHS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./videos.html">VIDEOS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">CONTACT</a>
-          </li>
-        </ul>
+      <div class="nav-links-container">
+        <div class="nav-links">
+          <a href="./about.html">ABOUT</a>
+          <a href="./cv.html">CV</a>
+          <a href="./photographs.html" class="active">PHOTOGRAPHS</a>
+          <a href="./videos.html">VIDEOS</a>
+          <a href="./contact.html">CONTACT</a>
+        </div>
+        <a 
+          class="hamburger" 
+          href="javascript:void(0);" 
+          onclick="showNavItems()"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
       </div>
     </nav>
-
-    <span id="Close" class="Close HoverWhite"
-      style=" position:fixed; display:none; top: 0px; right: 20px; color:#c1c1c1; font-size:50px; font-weight:600; z-index:667; cursor:pointer; transition:all .3s ease; user-select:none;">×</span>
-    <span id="Next" class="HoverWhite"
-      style=" position:fixed; display:none; width:20px;  right: 0px; top: 50%; transform: translate(-50%, -50%); color:#c1c1c1; font-size:40px; font-weight:600; z-index:667;  cursor:pointer; transition:all .3s ease; user-select:none;">❯</span>
-    <span id="Previous" class="HoverWhite"
-      style=" position:fixed;  display:none; width:20px; left: 15px; top: 50%; transform: translate(-50%, -50%); color:#c1c1c1; font-size:40px; font-weight:600; z-index:667; cursor:pointer; transition:all .3s ease; user-select:none;">❮</span>
-    <img id="Image" src=""
-      style=" position:fixed; display:none; width: 95%; height: 95%; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index:666; user-select:none; cursor:pointer; object-fit: contain;">
-
-    <div class="" style="width:100%; padding-top: 25px; height: 90vh;">
+    <!-- greyish background -->
+    <div id="dimmed"></div>
+    <!-- img controls -->
+    <span id="close">×</span>
+    <span id="next">❯</span>
+    <span id="previous">❮</span>
+    <img id="image" src="">
+    <!-- gallery -->
+    <div class="gallery-container">
       <div class="gallery">
-        <div class="gallery-thumbnails" style="margin:0 auto;  text-align:center; padding-top:15px;">
+        <div class="gallery-thumbnails">
           <img src="./static/img/cow_animals.jpeg">
           <img src="./static/img/napoleon_animals_1.jpeg">
           <img src="./static/img/napoleon_animals_2.jpeg">
@@ -168,102 +142,5 @@
         </div>
       </div>
     </div>
-
-    <script>
-      $(".gallery-thumbnails img").on("click", function () {
-        $("#Image").attr({ src: $(this).attr('src') });
-        $("#Dimmed").show();
-        $("#Image, #Close, #Next, #Previous").show();
-        $(".gallery-thumbnails, #Nav").hide();
-        $('.gallery-thumbnails img').css('transform', 'scale("1.0")');
-        $(this).css('transform', 'scale("1.1")');
-      });
-
-      $("#Dimmed, #Close").on("click", function () {
-        $("#Dimmed").hide();
-        $("#Image, #Close, #Next, #Previous").hide();
-        $(".gallery-thumbnails, #Nav").show();
-      });
-
-      $("#Image").on("click", function () {
-        SRC = $(this).attr('src');
-        $(".gallery-thumbnails img").each(function () {
-          if (SRC == $(this).attr('src')) {
-            $('.gallery-thumbnails img').css('transform', 'scale("1.0")');
-            if ($(this).next().length > 0) {
-              $("#Image").attr({ src: $(this).next().attr('src') });
-              $(this).next().css('transform', 'scale("1.1")');
-            }
-            else {
-              $("#Image").attr({ src: $(this).siblings().first().attr('src') });
-              $(this).siblings().first().css('transform', 'scale("1.1")');
-            }
-            return;
-          }
-        });
-      });
-
-      $("#Next").on("click", Right);
-
-      function Right() {
-        SRC = $("#Image").attr('src');
-        $(".gallery-thumbnails img").each(function () {
-          if (SRC == $(this).attr('src')) {
-            $('.gallery-thumbnails img').css('transform', 'scale("1.0")');
-            if ($(this).next().length > 0) {
-              $("#Image").attr({ src: $(this).next().attr('src') });
-              $(this).next().css('transform', 'scale("1.1")');
-            }
-            else {
-              $("#Image").attr({ src: $(this).siblings().first().attr('src') });
-              $(this).siblings().first().css('transform', 'scale("1.1")');
-            }
-            return;
-          }
-        });
-      }
-      $("#Previous").on("click", Left);
-
-      function Left() {
-        SRC = $("#Image").attr('src');
-        $(".gallery-thumbnails img").each(function () {
-          if (SRC == $(this).attr('src')) {
-            $(".gallery-thumbnails img").css('transform', 'scale("1.0")');
-            if ($(this).prev().length > 0) {
-              $("#Image").attr({ src: $(this).prev().attr('src') });
-              $(this).prev().css('transform', 'scale("1.1")');
-            }
-            else {
-              $("#Image").attr({ src: $(this).siblings().last().attr('src') });
-              $(this).siblings().last().css('transform', 'scale("1.1")');
-            }
-            return;
-          }
-        });
-      }
-
-      $(document).on('keydown', function (event) {
-        if ($('#Image').is(":visible")) {
-          if (event.keyCode == 39) // right 
-          {
-            Right();
-            $('#Next').css({ 'color': 'white' });
-            setTimeout(function () { $('#Next').css({ 'color': '#c1c1c1' }); }, 150);
-          }
-          else if (event.keyCode == 37) // left 
-          {
-            Left();
-            $('#Previous').css({ 'color': 'white' });
-            setTimeout(function () { $('#Previous').css({ 'color': '#c1c1c1' }); }, 150);
-          }
-          else if (event.keyCode == 27) //ESC
-          {
-            $("#Dimmed").hide();
-            $("#Image, #Close, #Next, #Previous").hide();
-            $(".gallery-thumbnails, #Nav").show();
-          }
-        }
-      });
-    </script>
   </body>
 </html>

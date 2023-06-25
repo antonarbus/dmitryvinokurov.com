@@ -4,8 +4,9 @@ function showNavItems() {
   
   if (navItemsShownOnPhone) {
     navLinks.show()
-    navLinks.slideUp(function() {
+    navLinks.slideUp(() => {
       navLinks.removeClass("shown-on-phone")
+      navLinks.removeAttr('style')
     })
   } else {
     navLinks.hide()

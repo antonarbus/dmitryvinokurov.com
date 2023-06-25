@@ -10401,7 +10401,7 @@ var Catalog = function () {
           });
           processed.put(obj);
         }
-        obj = outlineDict.getRaw('Next');
+        obj = outlineDict.getRaw('next');
         if ((0, _primitives.isRef)(obj) && !processed.has(obj)) {
           queue.push({
             obj: obj,
