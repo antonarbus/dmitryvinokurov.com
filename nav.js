@@ -8,9 +8,10 @@ function showNavItems() {
       navLinks.removeClass("shown-on-phone")
       navLinks.removeAttr('style')
     })
-  } else {
-    navLinks.hide()
-    navLinks.addClass("shown-on-phone")
-    navLinks.slideDown()
-  }
+    return
+  } 
+
+  navLinks.hide()
+  navLinks.addClass("shown-on-phone")
+  navLinks.slideDown()
 }
