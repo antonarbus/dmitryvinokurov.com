@@ -461,9 +461,11 @@
     function showNavItems() {
       const isNavItemsShown = document.querySelector('.shown-on-phone')
       if (isNavItemsShown) {
-        document.querySelector('.nav-links').classList.remove("shown-on-phone")
+        // document.querySelector('.nav-links').classList.remove("shown-on-phone")
+        $(".nav-links").slideToggle()
       } else {
-        document.querySelector('.nav-links').classList.add("shown-on-phone")
+        // document.querySelector('.nav-links').classList.add("shown-on-phone")
+        $(".nav-links").slideToggle()
       }
     }
   </script>
