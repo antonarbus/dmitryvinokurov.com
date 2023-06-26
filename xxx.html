@@ -14,62 +14,21 @@
     <meta property="og:description" content="Photos of Dmitry Vinokurov" />
     <meta property="og:image" content="https://dmitryvinokurov.com/static/img/index.jpg" />
     <link rel="icon" type="image/x-icon" href="favicon.png">
-
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
-
     <!-- CSS -->
-    <link rel="stylesheet" href="./static/css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./static/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./nav.css?v2">
-
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./nav.css">
+    <link rel="stylesheet" href="./photographs.css">
     <!-- JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- <script src="./static/js/bootstrap/bootstrap.min.js"></script> -->
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script defer src="./photographs.js"></script>
     <script defer src="./nav.js"></script>
-
-    <style>
-      ::-webkit-scrollbar {
-        width: 0px;
-        /* Remove scrollbar space */
-        background: transparent;
-        /* Optional: just make scrollbar invisible */
-      }
-
-      .gallery-thumbnails img {
-        height: 200px;
-        margin: 0 10px 10px 0;
-        width: auto;
-        display: inline-block;
-        margin: 3px;
-        cursor: pointer;
-        transition: transform .2s;
-        border-radius: 5px;
-      }
-
-      .gallery-thumbnails img:hover {
-        transform: scale(1.02);
-      }
-
-      @media only screen and (max-width: 500px) {
-        .gallery-thumbnails img {
-          height: auto;
-          width: 95% !important;
-        }
-      }
-
-      .hoverWhite:hover {
-        color: white !important;
-      }
-    </style>
   </head>
-
   <body>
-    <div id="dimmed"
-      style="display:none; position:fixed; overflow:auto; top:0; left:0; width:100%; height:100%; background:#000; opacity:0.5; z-index:665;">
-    </div>
-
+    <!-- nav -->
     <nav>
       <div class="logo-and-social-icons-container">
         <div class="logo-container">
@@ -135,19 +94,17 @@
         </a>
       </div>
     </nav>
-
-    <span id="close" class="close hoverWhite"
-      style=" position:fixed; display:none; top: 0px; right: 20px; color:#c1c1c1; font-size:50px; font-weight:600; z-index:667; cursor:pointer; transition:all .3s ease; user-select:none;">×</span>
-    <span id="next" class="hoverWhite"
-      style=" position:fixed; display:none; width:20px;  right: 0px; top: 50%; transform: translate(-50%, -50%); color:#c1c1c1; font-size:40px; font-weight:600; z-index:667;  cursor:pointer; transition:all .3s ease; user-select:none;">❯</span>
-    <span id="previous" class="hoverWhite"
-      style=" position:fixed;  display:none; width:20px; left: 15px; top: 50%; transform: translate(-50%, -50%); color:#c1c1c1; font-size:40px; font-weight:600; z-index:667; cursor:pointer; transition:all .3s ease; user-select:none;">❮</span>
-    <img id="image" src=""
-      style=" position:fixed; display:none; width: 95%; height: 95%; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index:666; user-select:none; cursor:pointer; object-fit: contain;">
-
-    <div class="" style="width:100%; padding-top: 25px; height: 90vh;">
+    <!-- greyish background -->
+    <div id="dimmed"></div>
+    <!-- img controls -->
+    <span id="close">×</span>
+    <span id="next">❯</span>
+    <span id="previous">❮</span>
+    <img id="image" src="">
+    <!-- gallery -->
+    <div class="gallery-container">
       <div class="gallery">
-        <div class="gallery-thumbnails" style="margin:0 auto;  text-align:center; padding-top:15px;">
+        <div class="gallery-thumbnails">
           <img src="./static/img/cow_animals.jpeg">
           <img src="./static/img/napoleon_animals_1.jpeg">
           <img src="./static/img/napoleon_animals_2.jpeg">
@@ -185,102 +142,5 @@
         </div>
       </div>
     </div>
-
-    <script>
-      $(".gallery-thumbnails img").on("click", function () {
-        $("#image").attr({ src: $(this).attr('src') });
-        $("#dimmed").show();
-        $("#image, #close, #next, #previous").show();
-        $(".gallery-thumbnails, #Nav").hide();
-        $('.gallery-thumbnails img').css('transform', 'scale("1.0")');
-        $(this).css('transform', 'scale("1.1")');
-      });
-
-      $("#dimmed, #close").on("click", function () {
-        $("#dimmed").hide();
-        $("#image, #close, #next, #previous").hide();
-        $(".gallery-thumbnails, #Nav").show();
-      });
-
-      $("#image").on("click", function () {
-        SRC = $(this).attr('src');
-        $(".gallery-thumbnails img").each(function () {
-          if (SRC == $(this).attr('src')) {
-            $('.gallery-thumbnails img').css('transform', 'scale("1.0")');
-            if ($(this).next().length > 0) {
-              $("#image").attr({ src: $(this).next().attr('src') });
-              $(this).next().css('transform', 'scale("1.1")');
-            }
-            else {
-              $("#image").attr({ src: $(this).siblings().first().attr('src') });
-              $(this).siblings().first().css('transform', 'scale("1.1")');
-            }
-            return;
-          }
-        });
-      });
-
-      $("#next").on("click", Right);
-
-      function Right() {
-        SRC = $("#image").attr('src');
-        $(".gallery-thumbnails img").each(function () {
-          if (SRC == $(this).attr('src')) {
-            $('.gallery-thumbnails img').css('transform', 'scale("1.0")');
-            if ($(this).next().length > 0) {
-              $("#image").attr({ src: $(this).next().attr('src') });
-              $(this).next().css('transform', 'scale("1.1")');
-            }
-            else {
-              $("#image").attr({ src: $(this).siblings().first().attr('src') });
-              $(this).siblings().first().css('transform', 'scale("1.1")');
-            }
-            return;
-          }
-        });
-      }
-      $("#previous").on("click", Left);
-
-      function Left() {
-        SRC = $("#image").attr('src');
-        $(".gallery-thumbnails img").each(function () {
-          if (SRC == $(this).attr('src')) {
-            $(".gallery-thumbnails img").css('transform', 'scale("1.0")');
-            if ($(this).prev().length > 0) {
-              $("#image").attr({ src: $(this).prev().attr('src') });
-              $(this).prev().css('transform', 'scale("1.1")');
-            }
-            else {
-              $("#image").attr({ src: $(this).siblings().last().attr('src') });
-              $(this).siblings().last().css('transform', 'scale("1.1")');
-            }
-            return;
-          }
-        });
-      }
-
-      $(document).on('keydown', function (event) {
-        if ($('#image').is(":visible")) {
-          if (event.keyCode == 39) // right 
-          {
-            Right();
-            $('#next').css({ 'color': 'white' });
-            setTimeout(function () { $('#next').css({ 'color': '#c1c1c1' }); }, 150);
-          }
-          else if (event.keyCode == 37) // left 
-          {
-            Left();
-            $('#previous').css({ 'color': 'white' });
-            setTimeout(function () { $('#previous').css({ 'color': '#c1c1c1' }); }, 150);
-          }
-          else if (event.keyCode == 27) //ESC
-          {
-            $("#dimmed").hide();
-            $("#image, #close, #next, #previous").hide();
-            $(".gallery-thumbnails, #Nav").show();
-          }
-        }
-      });
-    </script>
   </body>
 </html>
