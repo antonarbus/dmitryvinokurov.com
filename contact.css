@@ -1,0 +1,16 @@
+.contact-container {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 75%;
+  padding-left: 20vw;
+  margin-top: 50px;
+}
+
+.contact-container .grey {
+  text-decoration: none;
+  color: #212529;
+}
+
+.contact-container .grey:hover {
+  color: #bfbfbf;
+  text-decoration: none;
+}

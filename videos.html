@@ -1,140 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!-- title -->
     <title>Videos - Dmitry Vinokurov</title>
+    <!-- icon -->
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <!-- meta -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="The official website of actor Dmitry Vinokurov">
     <meta name="keywords" content="Dmitry Vinokurov, actor, Дмитрий Винокуров, актёр">
-    <meta name="author" content="Anas Aamoum, Anton Shcherbinin & Dmitry Vinokurov">
+    <meta name="author" content="Anas Aamoum, Anton Arbus & Dmitry Vinokurov">
     <meta property="og:url" content="https://dmitryvinokurov.com/videos.html" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Dmitry Vinokurov: videos" />
     <meta property="og:description" content="Videos of Dmitry Vinokurov" />
     <meta property="og:image" content="https://dmitryvinokurov.com/static/img/index.jpg" />
-    <link rel="icon" type="image/x-icon" href="favicon.png">
-
     <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Gothic">
     <!-- CSS -->
-    <link rel="stylesheet" href="./static/css/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="./static/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./style.css?v222">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./nav.css">
+    <link rel="stylesheet" href="./videos.css">
     <!-- JS -->
-    <script src="./static/js/jquery-3.4.0.min.js"></script>
-    <script src="./static/js/bootstrap/bootstrap.min.js"></script>
-
-    <style>
-      body::-webkit-scrollbar {
-        display: none;
-      }
-
-      .vimeo .embed-container iframe,
-      .vimeo .embed-container object,
-      .vimeo .embed-container embed {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-
-      .container {
-        display: flex;
-        max-width: 1300px;
-        padding: 10px 0px;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        row-gap: 10px;
-        column-gap: 10px;
-      }
-
-      .vid-block {
-        height: 220px;
-        width: 45%;
-        position: relative;
-        overflow: hidden;
-        background: black;
-        border-radius: 4px;
-      }
-
-      @media only screen and (max-width: 500px) {
-        .container {
-          max-width: 95vw;
-        }
-        .vid-block {
-          width: 100%;
-        }
-      }
-
-      iframe {
-        position: absolute; 
-        top: 0; 
-        left: 0;
-        width: 100%; 
-        height: 100%; 
-        border-radius: 4px;
-      }
-    </style>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script defer src="./nav.js"></script>
   </head>
-
   <body>
-    <!-- A grey horizontal navbar that collapses on small screens -->
-    <nav class="navbar navbar-expand-lg ap-dark navbar-dark sticky-top">
-      <!-- brand -->
-      <div class="navbar-brand">
-        <a href="./index.html"><img src="./static/img/DM-brand.png" alt="Dmitry Vinokurov Logo"
-            class="logo-img"></a><wbr/>
+    <nav>
+      <div class="logo-and-social-icons-container">
+        <div class="logo-container">
+          <a href="./index.html">
+            <img 
+              class="logo-img" 
+              src="./static/img/DM-brand.png" 
+              alt="Dmitry Vinokurov Logo" 
+            />
+          </a>
+        </div>
         <div class="social-icons-container">
-          <a href="https://www.instagram.com/dm.vinokurov/" target="_blank" class="social-icons"><i
-              class="fa fa-instagram" aria-hidden="true"></i></a>
-          <a href="https://www.facebook.com/DAVinokurov" target="_blank" class="social-icons"><i
-              class="fa fa-facebook" aria-hidden="true"></i></a>
-          <a href="https://www.imdb.com/name/nm9537565/?ref_=ttfc_fc_cl_t2" target="_blank"
-            class="social-icons"><i class="fa fa-imdb" aria-hidden="true"></i></a>
-          <a href="https://www.youtube.com/channel/UCnCFMErXJdftB4JF3SayjQg" target="_blank"
-            class="social-icons"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-          <a href="https://www.spotlight.com/interactive/cv/5098-6728-8278" target="_blank"><img
-              class="spotlight-icon" src="./static/img/spotlight.png" height="20"></a>
+          <a 
+            href="https://www.instagram.com/dm.vinokurov/" 
+            target="_blank" 
+          >
+            <i class="fa fa-instagram"></i>
+          </a>
+          <a 
+            href="https://www.facebook.com/DAVinokurov" 
+            target="_blank" 
+          >
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a
+            href="https://www.imdb.com/name/nm9537565/?ref_=ttfc_fc_cl_t2"
+            target="_blank"
+          >
+            <i class="fa fa-imdb"></i>
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCnCFMErXJdftB4JF3SayjQg"
+            target="_blank"
+          >
+            <i class="fa fa-youtube"></i>
+          </a>
+          <a 
+            href="https://www.spotlight.com/interactive/cv/5098-6728-8278" 
+            target="_blank"
+          >
+            <img 
+              class="spotlight-icon"
+              src="./static/img/spotlight.png" 
+              height="20"
+            />
+          </a>
         </div>
+      </div>
+      <div class="nav-links-container">
+        <div class="nav-links">
+          <a href="./about.html">ABOUT</a>
+          <a href="./cv.html">CV</a>
+          <a href="./photographs.html">PHOTOGRAPHS</a>
+          <a href="./videos.html" class="active">VIDEOS</a>
+          <a href="./contact.html">CONTACT</a>
         </div>
-        
-        <!-- Toggler/collapsibe Button -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse"
-        data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Links -->
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <!-- <ul class="navbar-nav mr-auto mt-2 mt-lg-0"> -->
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="./about.html">ABOUT</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./cv.html">CV</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./photographs.html">PHOTOGRAPHS</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="./videos.html">VIDEOS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">CONTACT</a>
-          </li>
-        </ul>
+        <a 
+          class="hamburger" 
+          onclick="showNavItems()"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
       </div>
     </nav>
-    
-    <div class="container">
+    <main class="container">
       <div class="vid-block">
         <iframe src="https://www.youtube.com/embed/pDrLCfKQJ7o" frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -195,6 +154,6 @@
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
       </div>
-      </div>
+    </main>
   </body>
 </html>

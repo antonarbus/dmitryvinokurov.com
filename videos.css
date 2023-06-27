@@ -1,0 +1,52 @@
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.vimeo .embed-container iframe,
+.vimeo .embed-container object,
+.vimeo .embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  padding: 10px 0px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.vid-block {
+  height: 220px;
+  width: 45%;
+  position: relative;
+  overflow: hidden;
+  background: black;
+  border-radius: 4px;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    padding: 20px;
+  }
+  .vid-block {
+    width: 100%;
+  }
+}
+
+iframe {
+  position: absolute; 
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%; 
+  border-radius: 4px;
+}

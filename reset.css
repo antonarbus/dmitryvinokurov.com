@@ -3,13 +3,28 @@
 }
 
 body {
-  background-color: white;
-  display: grid;
   margin: 0;
   padding: 0;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
 }
 
 img {
   vertical-align: middle;
   border-style: none;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
 }

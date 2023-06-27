@@ -111,22 +111,37 @@ nav {
 }
 
 @media (max-width: 700px) {
-  .nav-links:not(.shown-on-phone) {
+  .nav-links {
     display: none;
   }
 
   .nav-links-container a.hamburger {
     display: inline-flex;
   }
+}
 
-  .nav-links.shown-on-phone {
-    position: absolute;
-    top: 80px;
-    left: 0px;
-    width: 100%;
-    flex-direction: column;
-    background: black;
-    align-items: start;
-    padding: 15px;
-  }
+.phone-nav-links {
+  /* display: none; */
+  width: 100%;
+  background: black;
+  padding: 15px;
+}
+
+.phone-nav-links a {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 0.9em;
+  font-weight: 900;
+  color: rgba(255, 255, 255, .75);
+  text-decoration: none;
+  background-color: transparent;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.phone-nav-links a:hover {
+  color: white;
 }

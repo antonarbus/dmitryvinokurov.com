@@ -1,98 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!-- title -->
     <title>CV - Dmitry Vinokurov</title>
+    <!-- icon -->
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <!-- meta -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="The official website of actor Dmitry Vinokurov">
     <meta name="keywords" content="Dmitry Vinokurov, actor, Дмитрий Винокуров, актёр">
-    <meta name="author" content="Anas Aamoum, Anton Shcherbinin & Dmitry Vinokurov">
+    <meta name="author" content="Anas Aamoum, Anton Arbus & Dmitry Vinokurov">
     <meta property="og:url" content="https://dmitryvinokurov.com/cv.html" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Dmitry Vinokurov: cv" />
     <meta property="og:description" content="CV of Dmitry Vinokurov" />
     <meta property="og:image" content="https://dmitryvinokurov.com/static/img/index.jpg" />
-    <link rel="icon" type="image/x-icon" href="favicon.png">
-
     <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Gothic">
     <!-- CSS -->
-    <link rel="stylesheet" href="./static/css/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="./static/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./style.css?v222">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./nav.css">
     <!-- JS -->
-    <script src="./static/js/jquery-3.4.0.min.js"></script>
-    <script src="./static/js/bootstrap/bootstrap.min.js"></script>
-    <!-- <script src="./static/js/pdf.js"></script>
-    <script src="./static/js/load-pdf.js"></script> -->
-
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script defer src="./nav.js"></script>
   </head>
-
   <body>
-
-    <!-- A grey horizontal navbar that collapses on small screens -->
-    <nav class="navbar navbar-expand-lg ap-dark navbar-dark sticky-top">
-
-      <!-- brand -->
-      <div class="navbar-brand">
-        <a href="./index.html"><img src="./static/img/DM-brand.png" alt="Dmitry Vinokurov Logo"
-            class="logo-img"></a><wbr/>
+    <nav>
+      <div class="logo-and-social-icons-container">
+        <div class="logo-container">
+          <a href="./index.html">
+            <img 
+              class="logo-img" 
+              src="./static/img/DM-brand.png" 
+              alt="Dmitry Vinokurov Logo" 
+            />
+          </a>
+        </div>
         <div class="social-icons-container">
-          <a href="https://www.instagram.com/dm.vinokurov/" target="_blank" class="social-icons"><i
-              class="fa fa-instagram" aria-hidden="true"></i></a>
-          <a href="https://www.facebook.com/DAVinokurov" target="_blank" class="social-icons"><i
-              class="fa fa-facebook" aria-hidden="true"></i></a>
-          <a href="https://www.imdb.com/name/nm9537565/?ref_=ttfc_fc_cl_t2" target="_blank"
-            class="social-icons"><i class="fa fa-imdb" aria-hidden="true"></i></a>
-          <a href="https://www.youtube.com/channel/UCnCFMErXJdftB4JF3SayjQg" target="_blank"
-            class="social-icons"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-          <a href="https://www.spotlight.com/interactive/cv/5098-6728-8278" target="_blank"><img
-              class="spotlight-icon" src="./static/img/spotlight.png" height="20"></a>
+          <a 
+            href="https://www.instagram.com/dm.vinokurov/" 
+            target="_blank" 
+          >
+            <i class="fa fa-instagram"></i>
+          </a>
+          <a 
+            href="https://www.facebook.com/DAVinokurov" 
+            target="_blank" 
+          >
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a
+            href="https://www.imdb.com/name/nm9537565/?ref_=ttfc_fc_cl_t2"
+            target="_blank"
+          >
+            <i class="fa fa-imdb"></i>
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCnCFMErXJdftB4JF3SayjQg"
+            target="_blank"
+          >
+            <i class="fa fa-youtube"></i>
+          </a>
+          <a 
+            href="https://www.spotlight.com/interactive/cv/5098-6728-8278" 
+            target="_blank"
+          >
+            <img 
+              class="spotlight-icon"
+              src="./static/img/spotlight.png" 
+              height="20"
+            />
+          </a>
         </div>
       </div>
-
-      <!-- Toggler/collapsibe Button -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse"
-        data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-
-      <!-- Links -->
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <!-- <ul class="navbar-nav mr-auto mt-2 mt-lg-0"> -->
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="./about.html">ABOUT</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">CV</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./photographs.html">PHOTOGRAPHS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./videos.html">VIDEOS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">CONTACT</a>
-          </li>
-        </ul>
-        <div>
-
+      <div class="nav-links-container">
+        <div class="nav-links">
+          <a href="./about.html">ABOUT</a>
+          <a href="./cv.html" class="active">CV</a>
+          <a href="./photographs.html">PHOTOGRAPHS</a>
+          <a href="./videos.html">VIDEOS</a>
+          <a href="./contact.html">CONTACT</a>
+        </div>
+        <a 
+          class="hamburger" 
+          onclick="showNavItems()"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
     </nav>
-
-    <div style="height: 90vh;">
-      <!-- <canvas id="pdf"></canvas> -->
-
-      <iframe src="static/viewer/web/viewer.html?file=../../docs/Dmitry Vinokurov's CV.pdf" width="100%"
-        height="100%" style="border: none;" />
-
-    </div>
-
+    <main style="height: 90vh;">
+      <iframe 
+        src="static/viewer/web/viewer.html?file=../../Dmitry Vinokurov's CV.pdf" 
+        width="100%"
+        height="100%" 
+        style="border: none;" 
+      />
+    </main>
   </body>
 </html>

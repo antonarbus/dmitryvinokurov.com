@@ -1,0 +1,29 @@
+
+.content-text {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 75%;
+}
+
+ul.star-ul,
+li.star-bullet {
+  padding: 0;
+  list-style: none;
+}
+
+ul.star-ul {
+  margin: 0em;
+  margin-bottom: 1em;
+}
+
+li.star-bullet {
+  margin: 0.1em;
+  margin-left: 1.5em;
+}
+
+li.star-bullet:before {
+  content: '\f0da';
+  font-family: 'FontAwesome';
+  float: left;
+  margin-left: -1.5em;
+  color: black;
+}
